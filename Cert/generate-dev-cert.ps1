@@ -1,4 +1,4 @@
-$password = "SecretPassword123" #[guid]::newguid()
+$password = "SecretPassword123" #if you want a random password for each developer machine, use this GUID -> [guid]::newguid()
 $certPath = "$PSScriptRoot\kk-dev.pfx"
 #$certPath = "$env:APPDATA\ASP.NET\Https\kk-dev.pfx"
 Write-Host "Password generated: " $password
