@@ -20,12 +20,14 @@ COPY --from=publish /app .
 
 
 ARG CERT_PATH_DEST=/app/cert/localhost-dev.pfx
+ENV CertPath=$CERT_PATH_DEST
 
-COPY Cert/localhost-dev.pfx ${CERT_PATH_DEST}
+RUN echo "Env CertPath value is: $CertPath"
+
+COPY Cert/localhost-dev.pfx $CertPath
 
 # ENV ASPNETCORE_URLS https://+:44320
 # ENV ASPNETCORE_HTTPS_PORT 44320
 
-#ENV CertPath ${CERT_PATH_DEST}
 
 ENTRYPOINT ["dotnet", "HttpsAspNetCore.dll"]
