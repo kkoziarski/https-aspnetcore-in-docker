@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  kk_httpsaspnetcore:
+    image: ${DOCKER_REGISTRY}kk/httpsaspnetcore
+    build:
+      context: .
+      dockerfile: HttpsAspNetCore/Dockerfile

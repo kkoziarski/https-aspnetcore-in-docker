@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpsAspNetCore", "HttpsAspNetCore\HttpsAspNetCore.csproj", "{6210B892-5FF8-4ED5-8C27-8235B3ECB732}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{258859EF-6664-49AD-8490-45505148D2D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1DB29D27-6B05-462D-82C7-5F3A7F958D32}"
+	ProjectSection(SolutionItems) = preProject
+		Cert\generate-dev-cert.ps1 = Cert\generate-dev-cert.ps1
+		Cert\kk-dev.pfx = Cert\kk-dev.pfx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6210B892-5FF8-4ED5-8C27-8235B3ECB732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6210B892-5FF8-4ED5-8C27-8235B3ECB732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6210B892-5FF8-4ED5-8C27-8235B3ECB732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6210B892-5FF8-4ED5-8C27-8235B3ECB732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258859EF-6664-49AD-8490-45505148D2D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258859EF-6664-49AD-8490-45505148D2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258859EF-6664-49AD-8490-45505148D2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258859EF-6664-49AD-8490-45505148D2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FF36AA3-45EF-4161-9A75-910B75B05911}
+	EndGlobalSection
+EndGlobal
