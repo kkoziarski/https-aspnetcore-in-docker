@@ -19,9 +19,9 @@ WORKDIR /app
 COPY --from=publish /app .
 
 
-ARG CERT_PATH_DEST=/app/cert/kk-dev.pfx
+ARG CERT_PATH_DEST=/app/cert/localhost-dev.pfx
 
-COPY Cert/kk-dev.pfx ${CERT_PATH_DEST}
+COPY Cert/localhost-dev.pfx ${CERT_PATH_DEST}
 
 # ENV ASPNETCORE_URLS https://+:44320
 # ENV ASPNETCORE_HTTPS_PORT 44320

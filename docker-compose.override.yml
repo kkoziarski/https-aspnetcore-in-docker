@@ -7,7 +7,7 @@ services:
       - ASPNETCORE_HTTPS_PORT=44309
       - ASPNETCORE_URLS=https://+:443;http://+:80
       - CertPassword=SecretPassword123
-      - CertPath=/app/cert/kk-dev.pfx
+      - CertPath=/app/cert/localhost-dev.pfx
     ports:
       - "59709:80"
       - "44309:44309"
