@@ -1,4 +1,4 @@
-# Hot to run ASP.NET Core app on HTTPS in Docker
+# How to run ASP.NET Core app on HTTPS in Docker
 
 ## This prove of concept demonstrate following topics:
 1. Configuration of HTTPS in ASP.NET Core app: `Program.cs` and `Startup.cs`
