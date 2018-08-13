@@ -1,13 +1,13 @@
 # How to run ASP.NET Core app on HTTPS in Docker
 
-## This prove of concept demonstrate following topics:
+## This prove of concept demonstrates following topics:
 1. Configuration of HTTPS in ASP.NET Core app: `Program.cs` and `Startup.cs`
 2. Using SSL certificate file in ASP.NET Core app: `localhost-dev.pfx`
 3. Generating localhost development certifcate file: `generate-dev-cert.ps1`
 4. Running ASP.NET Core on HTTPS inside Docker container: `Dockerfile` and `docker-compose.override.yml`
 5. Configuring HTTPS ports for Visula Studio and Docker container: `launchSettings.json` and `docker-compose.override.yml`
 
-## Step 1:  Generate local development certificate
+## Step 1: Generate a local development certificate
 
 Execute `Cert\generate-dev-cert.ps1` file which will create a certificate: `Cert\localhost-dev.pfx` 
 with and auto-generated random password (a GUID) and saves that password in **UserSecrets** (`secrets.json`) for this project
@@ -20,7 +20,7 @@ docker-compose up -d --build
 ```
 this will build docker image and create a docker container. 
 
-## Step 3: Open browser
+## Step 3: Open a web browser
 
 Open https://localhost:44309/api/values to confirm the app is running correctly.
 
