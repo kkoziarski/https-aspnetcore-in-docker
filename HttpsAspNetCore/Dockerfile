@@ -1,9 +1,4 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
-WORKDIR /app
-EXPOSE 59709
-EXPOSE 44309
-
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 COPY HttpsAspNetCore/HttpsAspNetCore.csproj HttpsAspNetCore/
 RUN dotnet restore HttpsAspNetCore/HttpsAspNetCore.csproj
@@ -11,12 +6,14 @@ COPY . .
 WORKDIR /src/HttpsAspNetCore
 RUN dotnet build HttpsAspNetCore.csproj -c Release -o /app
 
-FROM build AS publish
 RUN dotnet publish HttpsAspNetCore.csproj -c Release -o /app
 
-FROM base AS final
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
-COPY --from=publish /app .
+#EXPOSE 59709
+EXPOSE 44309
+
+COPY --from=build /app .
 
 
 ARG CERT_PATH_DEST=/app/cert/localhost-dev.pfx
